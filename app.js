@@ -15,4 +15,13 @@ form.addEventListener("submit", function (event) {
   nameField.value = "";
   emailField.value = "";
 
+  const user = {
+    name: name,
+    email: email,
+  };
+
+  localStorage.setItem("user", JSON.stringify(user));
+
+  alert("Details saved successfully!");
+
 });
